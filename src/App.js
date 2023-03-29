@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Barra from './Components/Barra'
-import Home from './Views/Home';
+import Barra from './Components/Barra.jsx'
+import Home from './Views/Home.jsx';
+import Footer from './Components/Footer.jsx'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
 
 
      </Routes>
-     
+     <Footer></Footer>
      </BrowserRouter>
     </div>
   );
