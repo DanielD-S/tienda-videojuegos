@@ -31,6 +31,7 @@ function App() {
         <BrowserRouter>
           <Barra></Barra>
           <Routes>
+            
             {/* Ruta Home */}
             <Route path='/' element={<Home></Home>}>
             </Route>
@@ -38,10 +39,11 @@ function App() {
             <Route path='/Login' element={<Login></Login>}>
             </Route>
             {/* Falta Añadir mas rutas*/}
-          </Routes>
-          <Route path='/Detalle' element={<Detalle></Detalle>}>
-
-          </Route>
+            <Route path='/Detalle' element={<Detalle></Detalle>}>
+              </Route> 
+              
+        </Routes>
+         
           {/* Footer */}
           <Footer></Footer>
         </BrowserRouter>
