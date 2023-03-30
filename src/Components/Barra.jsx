@@ -4,14 +4,15 @@ import {Button} from 'react-bootstrap'
 
 const Barra = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between', background: 'rgb(23, 162, 184)', height: '70px', padding: '25px' }}>
+    <div style={{ display: 'flex', justifyContent: 'space-between', background: 'rgb(23, 162, 184)', height: '80px'}}>
+      
     <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
-      to='/'>
-      The Game Video Juegos
+      to='/' style={{padding: '25px' }}>
+    The Game Videojuegos
     </NavLink>
+    <img src='https://i.ibb.co/nfHpvX2/thegame22.png' style={{width:'200px',height:'80px'}}alt='logo'></img>
     <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
-      to='/carrito'>
-
+      to='/Login' style={{padding: '25px' }}>
       <Button>
         <strong> Registrate|Inicia Sesión </strong>
       </Button>
