@@ -8,7 +8,7 @@ const Barra = () => {
       
     <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
       to='/' style={{padding: '25px' }}>
-    The Game Videojuegos
+    🕹The Game Videojuegos
     </NavLink>
     <img src='https://i.ibb.co/nfHpvX2/thegame22.png' style={{width:'200px',height:'80px'}}alt='logo'></img>
     <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
@@ -16,7 +16,7 @@ const Barra = () => {
       <Button>
         <strong> Registrate|Inicia Sesión </strong>
       </Button>
-
+      <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')} to="/favoritos"> Favoritos </NavLink>
 
     </NavLink>
   </div>
