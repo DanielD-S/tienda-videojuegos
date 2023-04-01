@@ -11,14 +11,15 @@ const Barra = () => {
     The Game Videojuegos
     </NavLink>
     <img src='https://i.ibb.co/nfHpvX2/thegame22.png' style={{width:'200px',height:'80px'}}alt='logo'></img>
+    <div style={{padding: '25px' }}>
     <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
-      to='/Login' style={{padding: '25px' }}>
-      <Button>
-        <strong> Registrate|Inicia Sesión </strong>
+      to='/Login' >
+       <Button>
+      <strong>Inicia Sesión | Registrarse </strong>
       </Button>
-
-
     </NavLink>
+    </div>
+    
   </div>
   )
 }

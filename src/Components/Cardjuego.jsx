@@ -1,12 +1,11 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import { Card, Button } from 'react-bootstrap';
 
 const Cardjuego = ({juego}) => {
   return (
-    <div>
-      <Card style={{ width: '18rem', marginTop: '2em', marginLeft: '2em' }}>
-        <Card.Img variant="top" src={juego.img} />
+    <div >
+      <Card style={{ width: '15rem', height:'600px', marginTop: '2em', marginLeft: '2em' }}>
+        <Card.Img style={{marginTop:'10px'}} variant="top" src={juego.img} />
         <Card.Body>
           <Card.Title>{juego.name}</Card.Title>
           <hr></hr>
@@ -14,15 +13,18 @@ const Cardjuego = ({juego}) => {
             <h5>Disponibilidad</h5>
             <ul>
               {
-                juego.dispo.map((i) => <li key={i} style={{ listStyleType: "none", textAlign: 'start' }} > {i}</li>)
+                juego.dispo.map((i) => <li key={i} style={{ listStyleType: "none", textAlign: 'start' }} >✅ {i}</li>)
               }
             </ul>
           </div>
           <div>
-            <h4>${juego.price}</h4>
+            <h4>💰{juego.price}</h4>
           </div>
+          <div style={{margin:'20px'}}>
           <Button>Ver más</Button>
-          <Button>Añadir</Button>
+          <Button style={{margin:'2px'}}>Añadir</Button>
+          </div>
+          
         </Card.Body>
       </Card>
     </div>

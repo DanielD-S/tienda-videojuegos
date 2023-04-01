@@ -2,9 +2,9 @@ import Alert from 'react-bootstrap/Alert';
 
 const Footer = () => {
   return (
-    <div>
+    <div style={{height:'15px'}}>
         <Alert key="dark" variant="dark">
-          Footer de prueba
+        Copyright © 2023 The Game 
         </Alert>
     </div>
   )

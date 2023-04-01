@@ -2,6 +2,7 @@
     text-align: center;
   }
 
+/*CSS Vistas Activas*/
 .viewActiva{
     color:rgb(247, 243, 243);
     text-decoration: none;
@@ -12,3 +13,19 @@
     text-decoration: none;
   }
   
+  /* CSS Registro */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+  
+  /*Card*/
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
