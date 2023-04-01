@@ -45,10 +45,8 @@ function App() {
             </Route>
             {/* Falta Añadir mas rutas*/}
             <Route path='/Detalle' element={<Detalle></Detalle>}>
-
             </Route>
-          </Routes>
-         
+          </Routes>  
           {/* Footer */}
           <Footer></Footer>
         </BrowserRouter>
