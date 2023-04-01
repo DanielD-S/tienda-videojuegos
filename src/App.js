@@ -9,6 +9,7 @@ import Registro from './Views/Registro.jsx';
 import Detalle from './Views/Detalle.jsx';
 import { useState, useEffect } from 'react';
 import ContextoGlobal from './Context/ContextoGlobal';
+import Favoritos from './Views/Favoritos';
 
 
 function App() {
@@ -28,13 +29,13 @@ function App() {
 
   return (
     <div className="Style">
-      <ContextoGlobal.Provider value={{juegos}}>
+      <ContextoGlobal.Provider value={{juegos, setJuegos}}>
         <BrowserRouter>
           <Barra></Barra>
           <Routes>
             {/* Ruta Home */}
-            <Route path='/' element={<Home></Home>}>
-            </Route>
+            <Route path='/' element={<Home></Home>}/>
+          
             {/* Ruta Login */}
             
             <Route path='/Login' element={<Login></Login>}>

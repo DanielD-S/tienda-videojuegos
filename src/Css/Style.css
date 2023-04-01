@@ -4,12 +4,12 @@
 
 /*CSS Vistas Activas*/
 .viewActiva{
-    color:rgb(247, 243, 243);
+    color:rgb(213, 33, 33);
     text-decoration: none;
   }
   
   .view{
-    color:rgb(213, 33, 33);
+    color: rgb(247, 243, 243);
     text-decoration: none;
   }
   

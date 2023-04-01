@@ -3,8 +3,8 @@ import Galeria from '../Components/Galeria'
 
 const Home = () => {
   return (
-    <div>
-        <Galeria></Galeria>
+    <div id="Home">
+        <Galeria fav={false}></Galeria>
     </div>
     
   )
