@@ -13,19 +13,17 @@
     text-decoration: none;
   }
   
-  /* CSS Registro */
+  /* CSS Registro/Login */
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 75vh;
     
   }
   
-  /*Card*/
+ /* Imagen Barra */
 
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-  }
+ .img-cursor {
+  cursor: pointer;
+}

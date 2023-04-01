@@ -15,11 +15,10 @@ const Registro = () => {
     setShowModal(true);
   };
 
-
   return (
     <div className="container">
-      <Card className="p-4">
-      <Form onSubmit={handleSubmit}>
+      <Card className="p-5">
+      <Form style={{textAlign:'start'}}   onSubmit={handleSubmit}>
         <Form.Group controlId="formFirstName">
           <Form.Label>Nombre</Form.Label>
           <Form.Control
@@ -63,10 +62,12 @@ const Registro = () => {
             required
           />
         </Form.Group>
-
+        <div style={{textAlign:'center'}}>
         <Button style={{margin:'10px'}} variant="primary" type="submit">
-          Enviar Datos
+          Crear Cuenta <b>The Game</b>
         </Button>
+        </div>
+        
       </Form>
 
       <Modal show={showModal} onHide={() => setShowModal(false)}>
@@ -74,7 +75,7 @@ const Registro = () => {
           <Modal.Title>Registro exitoso</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Gracias por registrarse en nuestra página web.
+           Gracias por registrarse en nuestra página web.
         </Modal.Body>
         <Modal.Footer>
           <Button  variant="secondary" onClick={() => setShowModal(false)}>

@@ -28,6 +28,7 @@ const Login = () => {
           <Card>
             <Card.Body>
               <Card.Title>¿Aún no tienes cuenta?</Card.Title>
+              <p>Si es la primera vez que visitas la tienda, por favor regístrate haciendo click en el botón abajo.</p>
               <NavLink to="/Registro" className="btn btn-primary">Regístrate aquí</NavLink>
             </Card.Body>
           </Card>
