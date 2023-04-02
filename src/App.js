@@ -10,6 +10,8 @@ import Detalle from './Views/Detalle.jsx';
 import { useState, useEffect } from 'react';
 import ContextoGlobal from './Context/ContextoGlobal';
 import Favoritos from './Views/Favoritos';
+import Marketplace from './Views/Marketplace';
+
 
 
 function App() {
@@ -46,6 +48,10 @@ function App() {
             {/* Falta Añadir mas rutas*/}
             <Route path='/Detalle' element={<Detalle></Detalle>}>
             </Route>
+            {/* Falta Añadir mas rutas*/}
+            <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
+            </Route>
+
           </Routes>  
           {/* Footer */}
           <Footer></Footer>

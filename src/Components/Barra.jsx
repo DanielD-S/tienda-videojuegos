@@ -35,14 +35,27 @@ const Barra = () => {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}></img>
 
+<div>
+  
+</div>
       <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
         to='/Login' style={{ padding: '25px' }}>
-           <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')} to="/favoritos" style={{ padding: '25px' }}><i class="fa-solid fa-heart fa-beat"></i> Favoritos </NavLink>
+        <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')} to="/favoritos" style={{ padding: '25px' }}><i class="fa-solid fa-heart fa-beat">
+        </i> Favoritos 
+        </NavLink>
         <Button>
           <strong> Ingresar </strong>
-        </Button> </NavLink>
-       
+        </Button> 
+      </NavLink>
 
+      <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
+        to='/Marketplace' style={{ padding: '25px' }}>
+        <Button>
+          <strong> Marketplace </strong>
+        </Button> 
+      </NavLink>
+        
+       
     
     
   </div>
