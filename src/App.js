@@ -9,8 +9,8 @@ import Registro from './Views/Registro.jsx';
 import Detalle from './Views/Detalle.jsx';
 import { useState, useEffect } from 'react';
 import ContextoGlobal from './Context/ContextoGlobal';
-import Favoritos from './Views/Favoritos';
 import Marketplace from './Views/Marketplace';
+import Favoritos from './Views/Favoritos';
 
 
 
@@ -39,7 +39,6 @@ function App() {
             <Route path='/' element={<Home></Home>}/>
           
             {/* Ruta Login */}
-            
             <Route path='/Login' element={<Login></Login>}>
             </Route>
             {/* Ruta Registro */}
@@ -48,6 +47,7 @@ function App() {
             {/* Falta Añadir mas rutas*/}
             <Route path='/Detalle' element={<Detalle></Detalle>}>
             </Route>
+            <Route path="/favoritos" element={<Favoritos />} />
             {/* Falta Añadir mas rutas*/}
             <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
             </Route>

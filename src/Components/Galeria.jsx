@@ -7,7 +7,7 @@ const Galeria = ({ fav = false }) => {
   const { juegos } = useContext(ContextoGlobal);
   return (
     <>
-      <Row >
+       <Row >
         {
           juegos.filter((f) => {
             if (fav) {
@@ -16,7 +16,7 @@ const Galeria = ({ fav = false }) => {
               return f;
             }
           }).map((juego) => {
-            return <Col key={juego.id}><Cardjuego fav={fav} juegos={juego}></Cardjuego></Col>
+            return <Col key={juego.id}><Cardjuego fav={fav} juego={juego}></Cardjuego></Col>
           })
         }
       </Row>
