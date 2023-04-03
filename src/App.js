@@ -6,11 +6,11 @@ import Home from './Views/Home.jsx';
 import Footer from './Components/Footer.jsx'
 import Login from './Views/Login.jsx';
 import Registro from './Views/Registro.jsx';
-import Detalle from './Views/Detalle.jsx';
 import { useState, useEffect } from 'react';
 import ContextoGlobal from './Context/ContextoGlobal';
 import Marketplace from './Views/Marketplace';
 import Favoritos from './Views/Favoritos';
+import DetalleJuego from './Views/DetalleJuego';
 
 
 
@@ -46,7 +46,7 @@ function App() {
             <Route path='/Registro' element={<Registro></Registro>}>
             </Route>
             {/* Falta Añadir mas rutas*/}
-            <Route path='/Detalle' element={<Detalle></Detalle>}>
+            <Route path='/Detalle/:id' element={<DetalleJuego></DetalleJuego>}>
             </Route>
             <Route path="/favoritos" element={<Favoritos />} />
             {/* Falta Añadir mas rutas*/}
