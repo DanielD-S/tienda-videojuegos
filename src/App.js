@@ -47,12 +47,6 @@ function App() {
             </Route>
             {/* Falta Añadir mas rutas*/}
             <Route path='/Detalle' element={<Detalle></Detalle>}>
-<<<<<<< HEAD
-              </Route> 
-              
-        </Routes>
-         
-=======
             </Route>
             <Route path="/favoritos" element={<Favoritos />} />
             {/* Falta Añadir mas rutas*/}
@@ -60,7 +54,6 @@ function App() {
             </Route>
 
           </Routes>  
->>>>>>> 92c0323f4b59cec4f893428581f48fbda38b9f49
           {/* Footer */}
           <Footer></Footer>
         </BrowserRouter>
