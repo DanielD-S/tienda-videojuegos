@@ -2,7 +2,7 @@ import Alert from 'react-bootstrap/Alert';
 
 const Footer = () => {
   return (
-    <div>
+    <div style={{marginTop:'35px' , height:'5px'}}>
       <Alert className='footer' key="dark" variant="dark">
 
         <div>

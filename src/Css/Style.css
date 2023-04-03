@@ -2,6 +2,7 @@
     text-align: center;
   }
 
+/*CSS Vistas Activas*/
 .viewActiva{
     color:rgb(213, 33, 33);
     text-decoration: none;
@@ -11,7 +12,22 @@
     color: rgb(247, 243, 243);
     text-decoration: none;
   }
+  
+  /* CSS Registro/Login */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    
+  }
+  
+ /* Imagen Barra */
 
+ .img-cursor {
+  cursor: pointer;
+}
+/*Boton Favoritos*/
 .btnFav{
   background-color: transparent;
   border:0;

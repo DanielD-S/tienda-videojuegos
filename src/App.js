@@ -5,10 +5,13 @@ import Barra from './Components/Barra.jsx'
 import Home from './Views/Home.jsx';
 import Footer from './Components/Footer.jsx'
 import Login from './Views/Login.jsx';
+import Registro from './Views/Registro.jsx';
 import Detalle from './Views/Detalle.jsx';
 import { useState, useEffect } from 'react';
 import ContextoGlobal from './Context/ContextoGlobal';
+import Marketplace from './Views/Marketplace';
 import Favoritos from './Views/Favoritos';
+
 
 
 function App() {
@@ -16,7 +19,7 @@ function App() {
   const [juegos, setJuegos] = useState([])
 
   const getJuegos = async () => {
-    const res = await fetch(`http://localhost:3000/juegos.json`);
+    const res = await fetch(window.location.origin+'/juegos.json');
     const data = await res.json();
     setJuegos(data);
 
@@ -36,15 +39,20 @@ function App() {
             <Route path='/' element={<Home></Home>}/>
           
             {/* Ruta Login */}
-            <Route path='/Login' element={<Login></Login>}/>
-            
+            <Route path='/Login' element={<Login></Login>}>
+            </Route>
+            {/* Ruta Registro */}
+            <Route path='/Registro' element={<Registro></Registro>}>
+            </Route>
             {/* Falta Añadir mas rutas*/}
-            <Route path='/Detalle' element={<Detalle></Detalle>}/>
+            <Route path='/Detalle' element={<Detalle></Detalle>}>
+            </Route>
             <Route path="/favoritos" element={<Favoritos />} />
-          </Routes>
-          
+            {/* Falta Añadir mas rutas*/}
+            <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
+            </Route>
 
-          
+          </Routes>  
           {/* Footer */}
           <Footer></Footer>
         </BrowserRouter>

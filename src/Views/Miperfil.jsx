@@ -2,7 +2,7 @@ import React from 'react'
 
 const Miperfil = () => {
   return (
-    <div>Miperfil</div>
+    <div>Mi perfil</div>
   )
 }
 

@@ -7,7 +7,7 @@ const Galeria = ({ fav = false }) => {
   const { juegos } = useContext(ContextoGlobal);
   return (
     <>
-      <Row >
+       <Row >
         {
           juegos.filter((f) => {
             if (fav) {
@@ -24,4 +24,4 @@ const Galeria = ({ fav = false }) => {
   )
 }
 
-export default Galeria
+export default Galeria;
