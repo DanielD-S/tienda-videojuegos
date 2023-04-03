@@ -16,7 +16,7 @@ const Galeria = ({ fav = false }) => {
               return f;
             }
           }).map((juego) => {
-            return <Col key={juego.id}><Cardjuego fav={fav} juego={juego}></Cardjuego></Col>
+            return <Col key={juego.id}><Cardjuego  fav={fav} juego={juego}></Cardjuego></Col>
           })
         }
       </Row>

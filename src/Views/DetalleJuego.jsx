@@ -12,11 +12,11 @@ const DetalleJuego = () => {
 
   const juego = juegos.find((juego) => juego.id === parseInt(id));
 
-
-  const agregarJuego = (juego) => {
-    setJuegos((juegos) => [...juegos, juego]);
-  };
-
+// Hay que debugear este apartado, actualmente existe duplicidad a la hora de generar favoritos
+  // const agregarJuego = (juego) => {
+  //   setJuegos((juegos) => [...juegos, juego]);
+  // };
+  
 
   if (!juego) {
     return <div>Juego no encontrado</div>;
@@ -24,7 +24,7 @@ const DetalleJuego = () => {
 
 
   return (
-    <Card border="light" style={{ marginTop: '50px' }}>
+    <Card  border="light" style={{ marginTop: '50px' }}>
       <div className="d-flex justify-content-center align-items-center">
         <Card.Img
           variant="left"
@@ -51,9 +51,11 @@ const DetalleJuego = () => {
             <div>
               <h4>Precio: ${juego.price.toLocaleString('es-CL', { minimumFractionDigits: 0 })}</h4>
             </div>
+            {/*  
             <Button variant="primary" onClick={() => agregarJuego(juego)}>
               Añadir a Favoritos
             </Button>
+            */}
           </div>
         </div>
       </div>
