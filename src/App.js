@@ -6,11 +6,11 @@ import Home from './Views/Home.jsx';
 import Footer from './Components/Footer.jsx'
 import Login from './Views/Login.jsx';
 import Registro from './Views/Registro.jsx';
-import Detalle from './Views/Detalle.jsx';
 import { useState, useEffect } from 'react';
 import ContextoGlobal from './Context/ContextoGlobal';
 import Marketplace from './Views/Marketplace';
 import Favoritos from './Views/Favoritos';
+import DetalleJuego from './Views/DetalleJuego.jsx';
 
 
 
@@ -46,21 +46,11 @@ function App() {
             <Route path='/Registro' element={<Registro></Registro>}>
             </Route>
             {/* Falta Añadir mas rutas*/}
-            <Route path='/Detalle' element={<Detalle></Detalle>}>
-<<<<<<< HEAD
+            <Route path='/Detalle/:id' element={<DetalleJuego></DetalleJuego>}>
               </Route> 
               
         </Routes>
          
-=======
-            </Route>
-            <Route path="/favoritos" element={<Favoritos />} />
-            {/* Falta Añadir mas rutas*/}
-            <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
-            </Route>
-
-          </Routes>  
->>>>>>> 92c0323f4b59cec4f893428581f48fbda38b9f49
           {/* Footer */}
           <Footer></Footer>
         </BrowserRouter>
