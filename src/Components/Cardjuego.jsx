@@ -15,16 +15,17 @@ const Cardjuego = ({ fav,juego }) => {
 
   return (
     <div >  
+      
       <Card style={{ width: '15rem', height:'600px', marginTop: '2em', marginLeft: '2em' }}>
+      <Card.Img style={{marginTop:'10px'}} variant="top" src={juego.img} />
       {!fav && <p className="btnFav" onClick={() => eligeFavorito(juego.id)} >
          <Heart filled={juego.liked}></Heart>
         </p>
-        }
-        <Card.Img style={{marginTop:'10px'}} variant="top" src={juego.img} />
-        
+        } 
+        <Card.Title>{juego.name}</Card.Title>            
         <Card.Body>
-          <Card.Title>{juego.name}</Card.Title>
-          <hr></hr>
+          
+          <hr/>
           <div>
             <h5>Disponibilidad</h5>
             <ul>

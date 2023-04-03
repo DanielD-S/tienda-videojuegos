@@ -27,3 +27,15 @@
  .img-cursor {
   cursor: pointer;
 }
+/*Boton Favoritos*/
+.btnFav{
+  background-color: transparent;
+  border:0;
+  margin-left: 12rem;
+
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
