@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 import ContextoGlobal from './Context/ContextoGlobal';
 import Marketplace from './Views/Marketplace';
 import Favoritos from './Views/Favoritos';
-import DetalleJuego from './Views/DetalleJuego.jsx';
+import DetalleJuego from './Views/DetalleJuego.jsx'; //agregado por Paulina
 
 
 
@@ -48,6 +48,11 @@ function App() {
             {/* Falta Añadir mas rutas*/}
             <Route path='/Detalle/:id' element={<DetalleJuego></DetalleJuego>}>
               </Route> 
+            <Route path="/favoritos" element={<Favoritos />} />
+            {/* Falta Añadir mas rutas*/}
+            <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
+            </Route>
+
               
         </Routes>
          
