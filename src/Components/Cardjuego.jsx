@@ -2,6 +2,8 @@ import { Card, Button } from 'react-bootstrap';
 import React, { useContext } from 'react'
 import Heart from './Heart.jsx';
 import ContextoGlobal from '../Context/ContextoGlobal.jsx';
+import DetalleJuego from '../Views/DetalleJuego.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const Cardjuego = ({ fav,juego }) => {
   const { juegos, setJuegos } = useContext(ContextoGlobal);
@@ -12,16 +14,26 @@ const Cardjuego = ({ fav,juego }) => {
     setJuegos([...juegos]);
   }
 
+   // usar useNavigate
+   const navigate = useNavigate();
+
+   const verDetalle = () => {
+     navigate(`/Detalle/${juego.id}`);
+   }
 
   return (
     <div >  
       
       <Card style={{ width: '15rem', height:'620px', marginTop: '2em', marginLeft: '2em' }}>
+        {/* añadir enlace para ver en DetalleJuego */}
+        <a href={`/juego/${juego.id}`}></a>
       <Card.Img style={{marginTop:'10px'}} variant="top" src={juego.img} />
       {!fav && <p className="btnFav" onClick={() => eligeFavorito(juego.id)} >
          <Heart filled={juego.liked}></Heart>
         </p>
         } 
+
+
         <Card.Title>{juego.name}</Card.Title>            
         <Card.Body>
           
@@ -38,7 +50,9 @@ const Cardjuego = ({ fav,juego }) => {
             <h4>💰{juego.price}</h4>
           </div>
           <div style={{margin:'20px'}}>
-          <Button>Ver más</Button>
+
+            {/* adición función OnClick*/}
+            <Button onClick={() => verDetalle()}>Ver más</Button>
           <Button style={{margin:'2px'}}>Añadir</Button>
           </div>
         </Card.Body>
