@@ -24,6 +24,10 @@ const Login = () => {
             </Card.Body>
           </Card>
         </div>
+
+{/* FORMULARIO REGISTRO */}
+
+
         <div className="col-md-6">
           <Card>
             <Card.Body>

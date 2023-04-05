@@ -2,6 +2,7 @@ import React from 'react'
 import Galeria from '../Components/Galeria'
 
 const Favoritos = () => {
+  
   return (
     <div >
     <h1>Mis Favoritos</h1>  

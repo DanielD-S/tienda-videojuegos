@@ -11,7 +11,7 @@ import ContextoGlobal from './Context/ContextoGlobal';
 import Marketplace from './Views/Marketplace';
 import Favoritos from './Views/Favoritos';
 import DetalleJuego from './Views/DetalleJuego';
-
+import Miperfil from './Views/Miperfil';
 
 
 function App() {
@@ -35,16 +35,17 @@ function App() {
         <BrowserRouter>
           <Barra></Barra>
           <Routes>
-            
+            {/* RUTAS PUBLICAS */}
             {/* Ruta Home */}
-            <Route path='/' element={<Home></Home>}/>
-          
+            <Route path='/' element={<Home></Home>}/>         
             {/* Ruta Login */}
             <Route path='/Login' element={<Login></Login>}>
             </Route>
             {/* Ruta Registro */}
             <Route path='/Registro' element={<Registro></Registro>}>
             </Route>
+
+            {/* RUTAS PRIVADAS */}
             {/* Falta Añadir mas rutas*/}
             <Route path='/Detalle/:id' element={<DetalleJuego></DetalleJuego>}>
             </Route>
@@ -52,6 +53,9 @@ function App() {
             {/* Falta Añadir mas rutas*/}
             <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
             </Route>
+            <Route path='/Miperfil' element={<Miperfil></Miperfil>}>
+            </Route>
+
 
           </Routes>  
           {/* Footer */}
