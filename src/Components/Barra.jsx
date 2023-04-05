@@ -42,8 +42,11 @@ const Barra = () => {
       <div style={{marginTop:'25px'}}>
       <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
         to='/Login' style={{ padding: '5px' }}>
-        <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')} to="/favoritos" style={{ padding: '25px' }}><i class="fa-solid fa-heart fa-beat">
-        </i> Favoritos
+        <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')} to="/favoritos" style={{ padding: '25px' }}>
+          <i class="fa-solid fa-heart fa-beat"></i> Favoritos
+        </NavLink>
+        <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')} to="/MiPerfil" style={{ padding: '25px' }}>
+          <i class="fa-solid fa-user"></i> Mi Perfil
         </NavLink>
         <Button>
           <strong> Ingresar </strong>

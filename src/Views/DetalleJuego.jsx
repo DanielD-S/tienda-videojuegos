@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+
 import Card from 'react-bootstrap/Card';
 import ContextoGlobal from '../Context/ContextoGlobal';
 
 
 const DetalleJuego = () => {
   const { id } = useParams();
-  const { juegos, setJuegos } = useContext(ContextoGlobal);
+  const { juegos } = useContext(ContextoGlobal);
 
 
   const juego = juegos.find((juego) => juego.id === parseInt(id));

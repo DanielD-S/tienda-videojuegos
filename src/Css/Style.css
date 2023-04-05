@@ -80,3 +80,15 @@ transform: translate(-25%,-25%);
 .card-image:hover {
   transform: scale(1.7) translate(10%, -5%);
 }
+.perfil{
+  margin: 5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.imagenP{
+  border-radius: 80%;
+  border: 5px solid rgb(127, 255, 238);
+  margin-right: 1em;
+  width: 28%;
+}

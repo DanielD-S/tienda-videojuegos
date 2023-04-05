@@ -11,6 +11,7 @@ import ContextoGlobal from './Context/ContextoGlobal';
 import Marketplace from './Views/Marketplace';
 import Favoritos from './Views/Favoritos';
 import DetalleJuego from './Views/DetalleJuego';
+import Miperfil from './Views/Miperfil';
 
 
 
@@ -52,6 +53,7 @@ function App() {
             {/* Falta Añadir mas rutas*/}
             <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
             </Route>
+            <Route path="/MiPerfil" element={<Miperfil/>} />
 
           </Routes>  
           {/* Footer */}
