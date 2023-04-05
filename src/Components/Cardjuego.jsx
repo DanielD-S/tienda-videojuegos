@@ -2,7 +2,6 @@ import { Card, Button } from 'react-bootstrap';
 import React, { useContext } from 'react'
 import Heart from './Heart.jsx';
 import ContextoGlobal from '../Context/ContextoGlobal.jsx';
-import DetalleJuego from '../Views/DetalleJuego.jsx';
 import { useNavigate } from 'react-router-dom';
 
 const Cardjuego = ({ fav,juego }) => {
@@ -25,7 +24,7 @@ const Cardjuego = ({ fav,juego }) => {
     <div >  
       <Card  style={{ width: '15rem', height:'620px', marginTop: '2em', marginLeft: '2em' }}>
         {/* añadir enlace para ver en DetalleJuego */}
-        <a href={`/juego/${juego.id}`}></a>
+       
       <Card.Img className="card-image" style={{marginTop:'10px'}} variant="top" src={juego.img} />
       {!fav && <p className="btnFav" onClick={() => eligeFavorito(juego.id)} >
          <Heart filled={juego.liked}></Heart>
