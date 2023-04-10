@@ -1,9 +1,9 @@
-import Alert from 'react-bootstrap/Alert';
+import {Alert, ModalFooter, Navbar} from 'react-bootstrap';
 
 const Footer = () => {
   return (
-    <div style={{marginTop:'35px' , height:'5px'}}>
-      <Alert className='footer' key="dark" variant="dark">
+    <div style={{marginTop:'35px' , height:'5px'}} >
+      <Navbar fixed='bottom' className='footer' bg="secondary" variant="dark"  >
 
         <div>
           <h4>Redes Sociales</h4>
@@ -21,7 +21,7 @@ const Footer = () => {
           <h4>Sucursales</h4>
           <h6><i class="fa-solid fa-building"></i> Av Kennedy 9001 - local 3547 - piso 3</h6>
         </div>
-      </Alert>
+      </Navbar>
     </div>
   )
 };

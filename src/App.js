@@ -34,7 +34,7 @@ function App() {
     <div className="Style">
       <ContextoGlobal.Provider value={{juegos, setJuegos}}>
         <BrowserRouter>
-          <Barra></Barra>
+          <Barra  ></Barra>
           <Routes>
             
             {/* Ruta Home */}

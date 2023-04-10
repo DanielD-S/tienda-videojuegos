@@ -14,7 +14,7 @@ const DetalleJuego = () => {
 
 // Hay que debugear este apartado, actualmente existe duplicidad a la hora de generar favoritos
   // const agregarJuego = (juego) => {
-  //   setJuegos((juegos) => [...juegos, juego]);
+  //   setJuegos((juegos) => [...juegos]);
   // };
   
 
@@ -24,7 +24,8 @@ const DetalleJuego = () => {
 
 
   return (
-    <Card  border="light" style={{ marginTop: '50px' }}>
+    <div>
+    <Card  border="light" style={{ marginTop: '10em' }}>
       <div className="d-flex justify-content-center align-items-center">
         <Card.Img
           variant="left"
@@ -32,7 +33,7 @@ const DetalleJuego = () => {
           style={{ width: '300px', height: '300px', objectFit: 'cover' }}
         />
         <div className="p-3">
-          <Card.Title>{juego.name}</Card.Title>
+          <Card.Title><strong>{juego.name}</strong></Card.Title>
           <hr />
           <Card.Text>{juego.desc}</Card.Text>
           <hr />
@@ -60,6 +61,7 @@ const DetalleJuego = () => {
         </div>
       </div>
     </Card>
+    </div>
   );
 };
 
