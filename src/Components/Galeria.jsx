@@ -1,12 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext} from 'react'
 import { Row, Col } from 'react-bootstrap'
 import ContextoGlobal from '../Context/ContextoGlobal.jsx'
 import Cardjuego from './Cardjuego.jsx'
+import Carrusel from './Carrusel.jsx'
 
 const Galeria = ({ fav = false }) => {
   const { juegos } = useContext(ContextoGlobal);
+  
+
   return (
     <>
+     {!fav && <Carrusel/>
+    }
        <Row >
         {
           juegos.filter((f) => {

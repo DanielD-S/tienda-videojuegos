@@ -22,7 +22,7 @@ const Cardjuego = ({ fav,juego }) => {
 
   return (
     <div >  
-      <Card  style={{ width: '15rem', height:'620px', marginTop: '2em', marginLeft: '2em' }}>
+      <Card  style={{ width: '15rem', height:'500px', marginTop: '2em', marginLeft: '2em' }}>
         {/* añadir enlace para ver en DetalleJuego */}
        
       <Card.Img className="card-image" style={{marginTop:'10px'}} variant="top" src={juego.img} />
@@ -33,16 +33,11 @@ const Cardjuego = ({ fav,juego }) => {
         <Card.Title>{juego.name}</Card.Title>            
         <Card.Body>
           
-          <hr/>
+          
           <div>
-            <h5>Disponibilidad</h5>
-            <ul>
-              {
-                juego.dispo.map((i) => <li key={i} style={{ listStyleType: "none", textAlign: 'start' }} >✅ {i}</li>)
-                
-              }
-            </ul>
-            <hr></hr>
+            <h5>Consola:</h5>
+            <p>{juego.consola}</p>
+            <hr/>
           </div>
           <div>
             <h4>${juego.price.toLocaleString('es-CL', { minimumFractionDigits: 0 })}</h4> 
