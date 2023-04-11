@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom'
-import { Navbar } from 'react-bootstrap'
+import React, { useState, useContext} from 'react';
+import { NavLink, useNavigate } from 'react-router-dom'
+import { Navbar } from 'react-bootstrap';
+import Contexto from '../Context/Contexto';
 
 const Barra = () => {
 
   const [position, setPosition] = useState(0);
+ 
+  //para traer contexto para poder cerrar sesión
+  const { usuario, setUsuario} = useContext(Contexto);
+  const navigate =  useNavigate();
+  
+  const cerrarApp = () =>{
+  setUsuario({conectado: false, nombre: ''});
+  navigate('/');
+  }      
 
   const handleClick = () => {
     setPosition(100);
@@ -21,6 +31,7 @@ const Barra = () => {
   const handleMouseOut = () => {
     setIsHovering(false);
   };
+         
 
   return (
     <div>
@@ -46,24 +57,20 @@ const Barra = () => {
             to="/favoritos" style={{ padding: '15px' }}>
               <i class="fa-solid fa-heart fa-beat"></i> Favoritos
             </NavLink>
-            <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')} 
-            to="/MiPerfil" style={{ padding: '15px' }}>
-              <i class="fa-solid fa-user"></i> Mi Perfil
-            </NavLink> 
             <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
+            to='/miperfil' style={{ padding: '15px' }}> 
+             <strong>{usuario.email}</strong>
+          </NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
             to='/Marketplace' style={{ padding: '15px' }}>
             <i class="fa-solid fa-store"></i> Marketplace 
-            </NavLink>
-            <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
-            to='/Login' style={{ padding: '15px' }}> 
-            <i class="fa-solid fa-right-to-bracket"></i> Ingresar 
-            </NavLink>
+          </NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
+            to='/' style={{ padding: '15px' }}>
+            <i class="fa-solid fa-right-to-bracket" onClick={() => cerrarApp()}>Salir</i> 
+          </NavLink>
         </div >
       </Navbar>
-
-
-
-
 
     </div >
   )
