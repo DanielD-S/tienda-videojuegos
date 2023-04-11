@@ -5,7 +5,9 @@ import {Card, ListGroup, Button} from 'react-bootstrap'
 const Miperfil = () => {
   return (
     <div style={{marginTop:'8em'}}>
+      <h1>Mi Perfil</h1> 
     <div className='perfil'>
+    
       <img className="imagenP" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQKtbEn1SybCH0rzr_kYw6dL7MFbJ08DO5kFV84njwSBWiiXP0R" alt="" />
       <Card style={{ width: '18rem' }}>
       <Card.Body>

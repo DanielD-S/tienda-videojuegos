@@ -19,7 +19,7 @@ import Contexto from './Context/Contexto.jsx';
 
 function App() {
 
-  const [juegos, setJuegos] = useState([])
+  const [juegos, setJuegos] = useState([]);
 
    //Contexto para ingresar a sesión 
    const { usuario } = useContext(Contexto); 
