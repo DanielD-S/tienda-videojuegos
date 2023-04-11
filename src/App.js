@@ -6,18 +6,24 @@ import Home from './Views/Home.jsx';
 import Footer from './Components/Footer.jsx'
 import Login from './Views/Login.jsx';
 import Registro from './Views/Registro.jsx';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import ContextoGlobal from './Context/ContextoGlobal';
-import Marketplace from './Views/Marketplace';
-import Favoritos from './Views/Favoritos';
-import DetalleJuego from './Views/DetalleJuego';
-import Miperfil from './Views/Miperfil';
-
+import Marketplace from './Views/Marketplace.jsx';
+import Favoritos from './Views/Favoritos.jsx';
+import DetalleJuego from './Views/DetalleJuego.jsx';
+import Miperfil from './Views/Miperfil.jsx';
+import HomePrivado from './Views/HomePrivado.jsx';
+import NoValido from './Views/NoValido.jsx';
+import Contexto from './Context/Contexto.jsx';
 
 
 function App() {
 
   const [juegos, setJuegos] = useState([])
+
+   //Contexto para ingresar a sesión 
+   const { usuario } = useContext(Contexto); 
+   
 
   const getJuegos = async () => {
     const res = await fetch(window.location.origin+'/juegos.json');
@@ -37,24 +43,35 @@ function App() {
           <Barra  ></Barra>
           <Routes>
             
+            {/* Rutas Públicas */}
             {/* Ruta Home */}
             <Route path='/' element={<Home></Home>}/>
-          
-            {/* Ruta Login */}
+            {/* Ruta Registro y Login */}
             <Route path='/Login' element={<Login></Login>}>
-            </Route>
-            {/* Ruta Registro */}
+            </Route> 
             <Route path='/Registro' element={<Registro></Registro>}>
             </Route>
-            {/* Falta Añadir mas rutas*/}
+            {/* Ruta Detalle*/}
             <Route path='/Detalle/:id' element={<DetalleJuego></DetalleJuego>}>
             </Route>
-            <Route path="/favoritos" element={<Favoritos />} />
-            {/* Falta Añadir mas rutas*/}
+            {/* Ruta No valida*/}
+            <Route path='*' element={<NoValido></NoValido>}>
+            </Route>
+
+            {/* Rutas Privadas */}
+            {usuario.conectado &&
+             <>
+            {/* Rutas Home Privado */}
+            <Route path="/homeprivado" element={<HomePrivado></HomePrivado>}>
+            </Route>
+            {/* Ruta Marketplace*/}
             <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
             </Route>
+            {/* Ruta Mi Perfil*/}
             <Route path="/MiPerfil" element={<Miperfil/>} />
-
+            {/* Ruta Favoritos*/}
+            <Route path="/favoritos" element={<Favoritos />} />
+            </>}
           </Routes>  
           {/* Footer */}
           <Footer></Footer>

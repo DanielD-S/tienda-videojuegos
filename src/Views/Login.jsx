@@ -1,10 +1,34 @@
-import React from 'react';
+import { useState, useContext} from 'react';
 import { Card, Form, Button } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
-import '../Css/Style.css'
+import { NavLink, useNavigate} from 'react-router-dom';
+import '../Css/Style.css';
+import Contexto from '../Context/Contexto.jsx';
+
+
 const Login = () => {
+
+  //se agregan modificaciones para hacer  login
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const { lstUsuarios, setUsuario } = useContext(Contexto);
+    const navigate = useNavigate();
+
+    const validarUsuario = () => {
+      const usuarioValido = lstUsuarios.find((usuario) => usuario.email === email && usuario.clave === password)
+
+      if (usuarioValido) {
+            setUsuario({conectado: true, email: usuarioValido.email});
+            navigate('/homeprivado'); 
+
+      } else {      
+        alert('usuario invalido')
+      }
+    }
+
+
   return (
-    <div className="container" style={{marginTop:"3em"}}>
+    <div className="container">
       <div className="row">
         <div className="col-md-6">
           <Card>
@@ -13,13 +37,14 @@ const Login = () => {
               <Form>
                 <Form.Group>
                   <Form.Label>Correo electrónico</Form.Label>
-                  <Form.Control type="email" placeholder="Ingresa tu correo electrónico" />
+                  {/*Se agregan los Onchange y Onclick */}
+                  <Form.Control type="email" placeholder="Ingresa tu correo electrónico" onChange={(e) => setEmail(e.target.value)}/>
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Contraseña</Form.Label>
-                  <Form.Control type="password" placeholder="Ingresa tu contraseña" />
+                  <Form.Control type="password" placeholder="Ingresa tu contraseña" onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
-                <Button style={{margin:'10px'}} variant="primary" type="submit">Iniciar sesión</Button>
+                <Button style={{margin:'10px'}} variant="primary" type="submit" onClick={() =>validarUsuario()}>Iniciar sesión</Button>
               </Form>
             </Card.Body>
           </Card>
