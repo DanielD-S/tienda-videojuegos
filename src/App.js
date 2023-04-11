@@ -15,6 +15,7 @@ import Miperfil from './Views/Miperfil.jsx';
 import HomePrivado from './Views/HomePrivado.jsx';
 import NoValido from './Views/NoValido.jsx';
 import Contexto from './Context/Contexto.jsx';
+import BarraPrivada from './Components/BarraPrivada.jsx'
 
 
 function App() {
@@ -40,7 +41,11 @@ function App() {
     <div className="Style">
       <ContextoGlobal.Provider value={{juegos, setJuegos}}>
         <BrowserRouter>
-          <Barra  ></Barra>
+          {/* Definiendo barra y barra pública */}
+        {usuario.conectado ?
+        <BarraPrivada></BarraPrivada>:
+        <Barra></Barra>
+        }
           <Routes>
             
             {/* Rutas Públicas */}
