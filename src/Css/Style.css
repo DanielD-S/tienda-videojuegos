@@ -39,6 +39,7 @@
   flex-direction: row;
   justify-content: space-between;
   grid-area:footer;
+  height: 4em;
 }
 
 /*Waves The Game Animacion*/
@@ -94,11 +95,17 @@ transform: translate(-25%,-25%);
   margin-right: 1em;
   width: 28%;
 }
-
+.barraNav{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  background: rgb(23, 162, 184);
+   height: 75px;
+}
 
 #Home{
   margin-top: 5em;
 }
 .carrusel{
-  height: 550px;
+  height: 350px;
 }

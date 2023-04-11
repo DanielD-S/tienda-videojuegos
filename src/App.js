@@ -17,7 +17,7 @@ import Miperfil from './Views/Miperfil';
 
 function App() {
 
-  const [juegos, setJuegos] = useState([])
+  const [juegos, setJuegos] = useState([]);
 
   const getJuegos = async () => {
     const res = await fetch(window.location.origin+'/juegos.json');

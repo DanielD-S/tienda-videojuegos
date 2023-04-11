@@ -9,7 +9,7 @@ const Carrusel = () => {
   };
   return (
     <div>
-    <Carousel activeIndex={index} onSelect={handleSelect} style={{height:"20%"}}>
+    <Carousel activeIndex={index} onSelect={handleSelect} >
      
       <Carousel.Item>
         <img
