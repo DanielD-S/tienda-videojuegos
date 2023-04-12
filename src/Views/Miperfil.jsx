@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext} from 'react';
 import {Card, ListGroup, Button} from 'react-bootstrap'
+import Contexto from '../Context/Contexto';
 
 
 const Miperfil = () => {
+    //para traer contexto para poder cerrar sesión
+    const { usuario, setUsuario} = useContext(Contexto);
   return (
     <div style={{marginTop:'8em'}}>
       <h1>Mi Perfil</h1> 
@@ -16,10 +19,10 @@ const Miperfil = () => {
       </Card.Body>
       
       <ListGroup className="list-group-flush">
-      <ListGroup.Item>Nombre Usuario: Juan2000</ListGroup.Item>
-        <ListGroup.Item>Nombre: Juan</ListGroup.Item>
-        <ListGroup.Item>Apellido: Perez</ListGroup.Item>
-        <ListGroup.Item>Correo: admin@thegame.com</ListGroup.Item>
+      <ListGroup.Item>Nombre Usuario: {usuario.email}</ListGroup.Item>
+        <ListGroup.Item>Nombre: {usuario.nombre}</ListGroup.Item>
+        <ListGroup.Item>Apellido: {usuario.apellido}</ListGroup.Item>
+        <ListGroup.Item>Correo: {usuario.email}</ListGroup.Item>
       </ListGroup>
       
       <Card.Body>
