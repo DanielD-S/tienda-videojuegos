@@ -9,6 +9,8 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [cargando, setCargando] = useState(false);
   const { lstUsuarios, setUsuario } = useContext(Contexto);
+  
+
   const navigate = useNavigate();
 
   const validarUsuario = () => {
@@ -16,18 +18,26 @@ const Login = () => {
     const usuarioValido = lstUsuarios.find(
       (usuario) => usuario.email === email && usuario.clave === password
     );
-
+  
     if (usuarioValido) {
       setTimeout(() => {
-        setUsuario({ conectado: true, email: usuarioValido.email });
+        setUsuario({
+          conectado: true,
+          email: usuarioValido.email,
+          nombre: usuarioValido.nombre,
+          apellido: usuarioValido.apellido,
+          usuario: usuarioValido.usuario,
+          imagen: usuarioValido.img,
+        });
         setCargando(false);
         navigate('/homeprivado');
       }, 1500);
     } else {
       setCargando(false);
-      alert('usuario invalido');
+      alert('Usuario invalido');
     }
   };
+  
 
   return (
     <div className="container">

@@ -83,7 +83,6 @@ transform: translate(-25%,-25%);
   transform: scale(1.7) translate(10%, -5%);
 }
 .perfil{
-  
   margin: 5em;
   display: flex;
   justify-content: center;
