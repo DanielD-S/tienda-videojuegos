@@ -69,6 +69,7 @@
     "consola":"PS5" ,
     "liked": false
   },
+  
 {
     "desc": "Ambientado en el icónico universo de Alien, Aliens: Fireteam Elite es un juego de disparos y supervivencia cooperativo en tercera persona en el que tendrás que luchar junto con tu equipo de marines curtidos para contener la amenaza de los xenomorphs.",
     "id": 8,
@@ -199,5 +200,6 @@
     "consola":"PC" ,
     "liked": false
   }
+ 
 
 ]
