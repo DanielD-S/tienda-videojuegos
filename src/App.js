@@ -62,7 +62,7 @@ function App() {
             {usuario.conectado &&
              <>
             {/* Rutas Home Privado */}
-            <Route path="/homeprivado" element={<HomePrivado></HomePrivado>}>
+            <Route path="/Homeprivado" element={<HomePrivado></HomePrivado>}>
             </Route>
             {/* Ruta Marketplace*/}
             <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
@@ -70,7 +70,7 @@ function App() {
             {/* Ruta Mi Perfil*/}
             <Route path="/MiPerfil" element={<Miperfil/>} />
             {/* Ruta Favoritos*/}
-            <Route path="/favoritos" element={<Favoritos />} />
+            <Route path="/Favoritos" element={<Favoritos />} />
             </>}
           </Routes>  
           {/* Footer */}

@@ -3,7 +3,7 @@ import Galeria from '../Components/Galeria'
 
 const Favoritos = () => {
   return (
-    <div style={{marginTop:'5em'}} >
+    <div style={{marginTop:'15em'}} >
     <h1>Mis Favoritos</h1>  
     <div className="p-3 galeria grid-columns-4">
        <Galeria  fav={true}></Galeria>

@@ -6,8 +6,6 @@ import Carrusel from './Carrusel.jsx'
 
 const Galeria = ({ fav = false }) => {
   const { juegos } = useContext(ContextoGlobal);
-  
-
   return (
     <>
      {!fav && <Carrusel/>
