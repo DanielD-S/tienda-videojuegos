@@ -12,7 +12,7 @@ const Marketplace = () => {
   
     return (
         <div>
-        <h1 style={{marginTop:'3em'}}>Marketplace</h1>
+        <h1 style={{marginTop:'2em'}}>Marketplace</h1>
         <Container>
         <CrearPublicacion onCreatePublication={handleCreatePublication} />
         </Container>
