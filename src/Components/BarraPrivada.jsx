@@ -58,8 +58,9 @@ const Barra = () => {
               <i class="fa-solid fa-heart fa-beat"></i> Favoritos
             </NavLink>
             <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
+            
             to='/miperfil' style={{ padding: '15px' }}> 
-             <strong><i class="fa-regular fa-circle-user"></i> {usuario.email}</strong>
+             <strong><i class="fa-regular fa-circle-user"></i> {usuario.usuario}</strong>
           </NavLink>
           <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
             to='/Marketplace' style={{ padding: '15px' }}>

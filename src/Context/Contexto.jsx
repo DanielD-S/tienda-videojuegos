@@ -1,14 +1,11 @@
 import { createContext, useState } from "react";
 
-export const Contexto = createContext ({});
+export const Contexto = createContext({});
 
 export const ContextoProvider = (props) => {
-
-    const [usuario, setUsuario] = useState({});
-
-    const [lstProductos, setLstProductos] = useState([]);
-
-    const lstUsuarios = [
+  const [usuario, setUsuario] = useState({});
+  const [lstProductos, setLstProductos] = useState([]);
+  const [lstUsuarios, setLstUsuarios] = useState([
         {
             email:'leonardo@gmail.com', 
             clave: '12345',
@@ -47,14 +44,24 @@ export const ContextoProvider = (props) => {
             img:'https://i.ibb.co/SBvsh8G/imagen-2023-04-12-145803983.png'
        
         }
-    ]
+    
+  ]);
 
-  return ( 
-    <Contexto.Provider value={{lstUsuarios, usuario, setUsuario, setLstProductos, lstProductos}}>
-        {props.children}
+  const updateUser = (updatedData) => {
+    setUsuario((prevUser) => ({ ...prevUser, ...updatedData }));
+  };
 
+  const updateUsuarios = (id, updatedData) => {
+    setLstUsuarios((prevUsuarios) =>
+      prevUsuarios.map((user) => (user.id === id ? { ...user, ...updatedData } : user))
+    );
+  };
+
+  return (
+    <Contexto.Provider value={{ lstUsuarios, usuario, setUsuario, setLstProductos, lstProductos, updateUser, updateUsuarios }}>
+      {props.children}
     </Contexto.Provider>
-  )
-}
+  );
+};
 
-export default Contexto
+export default Contexto;

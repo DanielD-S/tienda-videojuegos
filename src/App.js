@@ -36,6 +36,7 @@ function App() {
     getJuegos();
   }, [])
 
+  
 
   return (
     <div className="Style">

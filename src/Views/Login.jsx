@@ -1,4 +1,4 @@
-import { useState, useContext} from 'react';
+import { useState, useContext } from 'react';
 import { Card, Form, Button, Spinner } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../Css/Style.css';
@@ -9,7 +9,6 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [cargando, setCargando] = useState(false);
   const { lstUsuarios, setUsuario } = useContext(Contexto);
-  
 
   const navigate = useNavigate();
 
@@ -18,17 +17,19 @@ const Login = () => {
     const usuarioValido = lstUsuarios.find(
       (usuario) => usuario.email === email && usuario.clave === password
     );
-  
+
     if (usuarioValido) {
       setTimeout(() => {
-        setUsuario({
+        setUsuario((prevUsuario) => ({
+          ...prevUsuario,
           conectado: true,
           email: usuarioValido.email,
           nombre: usuarioValido.nombre,
           apellido: usuarioValido.apellido,
           usuario: usuarioValido.usuario,
           imagen: usuarioValido.img,
-        });
+          id: usuarioValido.id
+        }));
         setCargando(false);
         navigate('/homeprivado');
       }, 1500);
@@ -37,7 +38,6 @@ const Login = () => {
       alert('Usuario invalido');
     }
   };
-  
 
   return (
     <div className="container">
@@ -64,7 +64,7 @@ const Login = () => {
                   />
                 </Form.Group>
                 {cargando ? (
-                  <Button  style={{ margin: '10px' }} variant="primary" disabled>
+                  <Button style={{ margin: '10px' }} variant="primary" disabled>
                     <Spinner animation="border" size="sm" />
                     Cargando Datos ...
                   </Button>
