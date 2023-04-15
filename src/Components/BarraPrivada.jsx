@@ -41,18 +41,18 @@ const Barra = () => {
           className={isHovering ? 'img-cursor' : ''}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}></img>
-
-        <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
-          to='/' style={{ padding: '25px' }}>
           <div className='waves'>
             <span>🕹The Game Videojuegos</span>
             <span>🕹The Game Videojuegos</span>
           </div>
-        </NavLink>
+      
         <div>
         </div>
         <div style={{ marginTop: '25px' }}>
-          
+        <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
+            to='/' style={{ padding: '15px' }}>
+            <i class="fa-solid fa-store"></i> Marketplace 
+          </NavLink>  
             <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')} 
             to="/favoritos" style={{ padding: '15px' }}>
               <i class="fa-solid fa-heart fa-beat"></i> Favoritos
@@ -61,10 +61,6 @@ const Barra = () => {
             
             to='/miperfil' style={{ padding: '15px' }}> 
              <strong><i class="fa-regular fa-circle-user"></i> {usuario.usuario}</strong>
-          </NavLink>
-          <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
-            to='/Marketplace' style={{ padding: '15px' }}>
-            <i class="fa-solid fa-store"></i> Marketplace 
           </NavLink>
           <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
             to='/' style={{ padding: '15px' }}>

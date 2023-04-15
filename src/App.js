@@ -18,6 +18,7 @@ import Contexto from './Context/Contexto.jsx';
 import BarraPrivada from './Components/BarraPrivada.jsx'
 
 
+
 function App() {
 
   const [juegos, setJuegos] = useState([]);

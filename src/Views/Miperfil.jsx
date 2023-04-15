@@ -1,29 +1,31 @@
 import React, { useContext, useState } from "react";
 import { Card, ListGroup, Button, Form, Spinner } from "react-bootstrap";
 import Contexto from "../Context/Contexto";
+import { Link } from "react-router-dom";
 
 const MiPerfil = () => {
   const { usuario, updateUser, updateUsuarios } = useContext(Contexto);
-
   const [editMode, setEditMode] = useState(false);
   const [nombre, setNombre] = useState(usuario.nombre);
   const [apellido, setApellido] = useState(usuario.apellido);
   const [nombreUsuario, setNombreUsuario] = useState(usuario.usuario);
   const [correo, setCorreo] = useState(usuario.email);
   const [file, setFile] = useState(null);
-  const [loading, setLoading] = useState(false); // nuevo estado para el spinner
+  const [loading, setLoading] = useState(false); 
 
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files.length > 0) {
       setFile(e.target.files[0]);
     }
   };
+  
   const toggleEditMode = () => {
     setEditMode(!editMode);
   };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // mostramos el spinner al enviar el formulario
+    setLoading(true); 
 
     let imageUrl = usuario.imagen;
     if (file) {
@@ -44,12 +46,11 @@ const MiPerfil = () => {
       imagen: imageUrl,
     };
 
-    // esperamos 1 segundo antes de actualizar los datos
     setTimeout(() => {
       updateUser(updatedData);
       updateUsuarios(usuario.id, updatedData);
       setEditMode(false);
-      setLoading(false); // ocultamos el spinner
+      setLoading(false); 
     }, 1000);
   };
 
@@ -96,48 +97,50 @@ const MiPerfil = () => {
                     type="text"
                     value={apellido}
                     onChange={(e) => setApellido(e.targetvalue)}
-                  />
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  Correo:{" "}
-                  <Form.Control
+                    />
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                    Correo:{" "}
+                    <Form.Control
                     type="email"
                     value={correo}
                     onChange={(e) => setCorreo(e.target.value)}
-                  />
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  Imagen de perfil:{" "}
-                  <Form.Control type="file" onChange={handleFileChange} />
-                </ListGroup.Item>
-              </ListGroup>
-              <Card.Body>
-                <Button type="submit" disabled={loading}>
-                  {loading ? (
+                    />
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                    Imagen de perfil:{" "}
+                    <Form.Control type="file" onChange={handleFileChange} />
+                    </ListGroup.Item>
+                    </ListGroup>
+                    <Card.Body>
+                    <Button type="submit" disabled={loading}>
+                    {loading ? (
                     <>
-                      <Spinner animation="border" size="sm" /> Actualizando datos...
+                    <Spinner animation="border" size="sm" /> Actualizando datos...
                     </>
-                  ) : (
+                    ) : (
                     "Guardar cambios"
-                  )}
-                </Button>
-              </Card.Body>
-            </Form>
-          ) : (
-            <ListGroup>
-              <ListGroup.Item>Nombre Usuario: {usuario.usuario}</ListGroup.Item>
-              <ListGroup.Item>Nombre: {usuario.nombre}</ListGroup.Item>
-              <ListGroup.Item>Apellido: {usuario.apellido}</ListGroup.Item>
-              <ListGroup.Item>Correo: {usuario.email}</ListGroup.Item>
-            </ListGroup>
-          )}
-          <Card.Body>
-            <Button>Mis Publicaciones</Button>
-          </Card.Body>
-        </Card>
-      </div>
-    </div>
-  );
-};
-
-export default MiPerfil;
+                    )}
+                    </Button>
+                    </Card.Body>
+                    </Form>
+                    ) : (
+                    <ListGroup>
+                    <ListGroup.Item>Nombre Usuario: {usuario.usuario}</ListGroup.Item>
+                    <ListGroup.Item>Nombre: {usuario.nombre}</ListGroup.Item>
+                    <ListGroup.Item>Apellido: {usuario.apellido}</ListGroup.Item>
+                    <ListGroup.Item>Correo: {usuario.email}</ListGroup.Item>
+                    </ListGroup>
+                    )}
+                    <Card.Body>
+                    <Link to="/marketplace">
+                    <Button>Crear Publicación</Button>
+                    </Link>
+                    </Card.Body>
+                    </Card>
+                    </div>
+                    </div>
+                    );
+                    };
+                    
+                    export default MiPerfil;
