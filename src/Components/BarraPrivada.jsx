@@ -42,12 +42,9 @@ const Barra = () => {
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}></img>
           <div className='waves'>
-            <span>🕹The Game Videojuegos</span>
-            <span>🕹The Game Videojuegos</span>
-          </div>
       
-        <div>
-        </div>
+          
+          </div>
         <div style={{ marginTop: '25px' }}>
         <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
             to='/' style={{ padding: '15px' }}>

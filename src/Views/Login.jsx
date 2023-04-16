@@ -50,6 +50,7 @@ const Login = () => {
                 <Form.Group>
                   <Form.Label>Correo electrónico</Form.Label>
                   <Form.Control
+                   className="form-control"
                     type="email"
                     placeholder="Ingresa tu correo electrónico"
                     onChange={(e) => setEmail(e.target.value)}
@@ -58,6 +59,7 @@ const Login = () => {
                 <Form.Group>
                   <Form.Label>Contraseña</Form.Label>
                   <Form.Control
+                   className="form-control"
                     type="password"
                     placeholder="Ingresa tu contraseña"
                     onChange={(e) => setPassword(e.target.value)}

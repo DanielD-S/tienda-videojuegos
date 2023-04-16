@@ -30,20 +30,13 @@ const Barra = () => {
           className={isHovering ? 'img-cursor' : ''}
           onMouseOver={handleMouseOver}
           onMouseOut={handleMouseOut}></img>
-
-        <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
-          to='/' style={{ padding: '25px' }}>
-          <div className='waves'>
-            <span>🕹The Game Videojuegos</span>
-            <span>🕹The Game Videojuegos</span>
-          </div>
-        </NavLink>
         <div>
         </div>
         <div style={{ marginTop: '25px' }}>
-          
-            
-            
+        <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
+            to='/' style={{ padding: '15px' }}>
+            <i class="fa-solid fa-home"></i> Home
+          </NavLink>  
             <NavLink className={({ isActive }) => (isActive ? 'viewActiva' : 'view')}
             to='/Login' style={{ padding: '15px' }}> 
             <i class="fa-solid fa-right-to-bracket"></i> Ingresar 
