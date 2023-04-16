@@ -46,6 +46,7 @@ const Barra = () => {
             activeStyle={{ borderBottom: '3px solid #fff' }}
             exact
           >
+            <i class="fa-solid fa-home"></i>
             Home
           </NavLink>
           <NavLink
@@ -59,6 +60,7 @@ const Barra = () => {
             }}
             activeStyle={{ borderBottom: '3px solid #fff' }}
           >
+            <i class="fa-solid fa-right-to-bracket"></i>
             Ingresar
           </NavLink>
         </div>
