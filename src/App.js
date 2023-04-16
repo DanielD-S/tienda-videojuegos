@@ -15,11 +15,15 @@ import Miperfil from './Views/Miperfil.jsx';
 import HomePrivado from './Views/HomePrivado.jsx';
 import NoValido from './Views/NoValido.jsx';
 import Contexto from './Context/Contexto.jsx';
+import BarraPrivada from './Components/BarraPrivada.jsx'
+
 
 
 function App() {
 
   const [juegos, setJuegos] = useState([]);
+
+  const [juegosFiltrados,setJuegosFiltrados] = useState([]);
 
    //Contexto para ingresar a sesión 
    const { usuario } = useContext(Contexto); 
@@ -29,18 +33,24 @@ function App() {
     const res = await fetch(window.location.origin+'/juegos.json');
     const data = await res.json();
     setJuegos(data);
+    setJuegosFiltrados(data);
 
   }
   useEffect(() => {
     getJuegos();
   }, [])
 
+  
 
   return (
     <div className="Style">
-      <ContextoGlobal.Provider value={{juegos, setJuegos}}>
+      <ContextoGlobal.Provider value={{juegos, setJuegos, juegosFiltrados,setJuegosFiltrados}}>
         <BrowserRouter>
-          <Barra  ></Barra>
+          {/* Definiendo barra y barra pública */}
+        {usuario.conectado ?
+        <BarraPrivada></BarraPrivada>:
+        <Barra></Barra>
+        }
           <Routes>
             
             {/* Rutas Públicas */}
@@ -57,12 +67,15 @@ function App() {
             {/* Ruta No valida*/}
             <Route path='*' element={<NoValido></NoValido>}>
             </Route>
+            <Route path='/Miperfil' element={<Miperfil></Miperfil>}>
+            </Route>
+
 
             {/* Rutas Privadas */}
             {usuario.conectado &&
              <>
             {/* Rutas Home Privado */}
-            <Route path="/Homeprivado" element={<HomePrivado></HomePrivado>}>
+            <Route path="/homeprivado" element={<HomePrivado></HomePrivado>}>
             </Route>
             {/* Ruta Marketplace*/}
             <Route path='/Marketplace' element={<Marketplace></Marketplace>}>
@@ -70,7 +83,7 @@ function App() {
             {/* Ruta Mi Perfil*/}
             <Route path="/MiPerfil" element={<Miperfil/>} />
             {/* Ruta Favoritos*/}
-            <Route path="/Favoritos" element={<Favoritos />} />
+            <Route path="/favoritos" element={<Favoritos />} />
             </>}
           </Routes>  
           {/* Footer */}

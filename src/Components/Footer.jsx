@@ -1,33 +1,47 @@
-import { Navbar} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaEnvelope, FaBuilding } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div style={{marginTop:'35px' }} >
-      <Navbar fixed='bottom' className='footer' bg="secondary" variant="dark"  >
-        <div style={{display:"flex",flexDirection:'row'}}>
-          <h6>© 2020 Copyright: </h6>
-          <h7 style={{margin:'2px'}}>thegame.com</h7>
-        </div>
-
-        <div>
-          <h6>Redes Sociales</h6>
-          <i class="fa-brands fa-square-twitter"></i>
-          <i class="fa-brands fa-instagram m-2"></i>
-          <i class="fa-brands fa-square-facebook"></i>
-
-        </div>
-        <div>
-          <h6>Contacto</h6>
-          <h7><i class="fa-brands fa-whatsapp"></i> +56987459966</h7>
-          <h7><i class="fa-regular fa-envelope"></i> admin@thegame.com</h7>
-        </div>
-        <div>
-          <h6>Sucursales</h6>
-          <h7><i class="fa-solid fa-building"></i> Av Kennedy 9001 - local 3547 - piso 3</h7>
-        </div>
-      </Navbar>
+    <div className="footer" style={{ backgroundColor: "#222", color: "#fff", minHeight: '13rem', marginTop:'35px', alignItems:'center' }}>
+      <Container className='container-footer'>
+        <Row>
+          <Col md={4} className="footer-section">
+            <h5 style={{ textShadow: "1px 1px #000" }}>theGame</h5>
+            <p style={{ textShadow: "1px 1px #000", maxWidth: "300px" }}></p>
+          </Col>
+          <Col md={2} className="footer-section">
+            <h5 style={{ textShadow: "1px 1px #000" }}>Redes Sociales</h5>
+            <div >
+              <a className="social-icons"href="https://www.facebook.com"><FaFacebook /></a>
+              <a className="social-icons"href="https://www.twitter.com"><FaTwitter /></a>
+              <a className="social-icons" href="https://www.instagram.com"><FaInstagram /></a>
+            </div>
+          </Col>
+          <Col md={3} className="footer-section">
+            <h5 style={{ textShadow: "1px 1px #000" }}>Contacto</h5>
+            <div className="contact-info">
+              <p style={{ textShadow: "1px 1px #000", maxWidth: "200px" }}><FaWhatsapp /> +56987459966</p>
+              <p style={{ textShadow: "1px 1px #000", maxWidth: "200px" }}><FaEnvelope /> admin@thegame.com</p>
+            </div>
+          </Col>
+          <Col md={3} className="footer-section">
+            <h5 style={{ textShadow: "1px 1px #000" }}>Sucursales</h5>
+            <div className="location-info">
+              <p style={{ textShadow: "1px 1px #000", maxWidth: "300px" }}><FaBuilding /> Av Kennedy 9001 - local 3547 - piso 3</p>
+            </div>
+          </Col>
+        </Row>
+        <hr className="footer-divider" style={{ borderColor: "#fff" }} />
+        <Row>
+          <Col md={12} className="text-center">
+            <p style={{ textShadow: "1px 1px #000" }}>&copy; 2023 theGame. Todos los derechos reservados.</p>
+          </Col>
+        </Row>
+      </Container>
     </div>
-  )
+  );
 };
 
-export default Footer; 
+export default Footer;
+

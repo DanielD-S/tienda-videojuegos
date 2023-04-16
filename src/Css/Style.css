@@ -2,6 +2,11 @@
     text-align: center;
   }
 
+.form-control::placeholder {
+    color: red;
+  }
+   
+
 /*CSS Vistas Activas*/
 .viewActiva{
     color:rgb(213, 33, 33);
@@ -35,43 +40,12 @@
 
 }
 .footer{
-  display: flex;
-  flex-direction: row;
+  display: flex;  
   justify-content: space-between;
   grid-area:footer;
-  height: 4em;
+  height: 1em;
 }
 
-/*Waves The Game Animacion*/
-
-.waves span{
-position:absolute;
-color:rgb(228, 20, 12);
-font-size: 35px;
-transform: translate(-25%,-25%);
-}
-
-.waves span:nth-child(1){
-  color:rgb(5, 5, 5);
-  -webkit-text-stroke: 0.3px, #000000;
-}
-
-.waves span:nth-child(2){
-  color: rgb(241, 243, 246);
-  -webkit-text-stroke: 1px,#000000;
-  animation: animation 2s ease-in-out infinite;
-}
-
-@keyframes animation{
-  0%,100% {
-    clip-path: polygon(0% 45%, 15% 44%, 32% 50%,54% 60%,70% 61%, 84% 59%, 100% 52%,100% 100%, 0% 100%);
-  }
-  50%{
-    clip-path: polygon( 0% 60%, 16% 65%, 34% 66%,51% 62%,67% 50%,84% 45%,100% 46%,100% 100%, 0% 100%
-
-    );
-  }
-}
 
 /*Animacion Card*/
 
@@ -81,13 +55,6 @@ transform: translate(-25%,-25%);
 
 .card-image:hover {
   transform: scale(1.7) translate(10%, -5%);
-}
-.perfil{
-  
-  margin: 5em;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 .imagenP{
   border-radius: 80%;
@@ -104,8 +71,67 @@ transform: translate(-25%,-25%);
 }
 
 #Home{
-  margin-top: 5em;
+  margin-top: 6.5em;
 }
 .carrusel{
   height: 350px;
+}
+.buscador{
+  border-radius: 80px;
+}
+@media (min-width: 576px) {
+  .detalle{
+    display: flex;
+   flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    .perfil{
+      margin: 5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    
+}
+@media (min-width: 768px) {
+  .detalle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    
+    } 
+    .perfil{
+      margin: 5em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+    }
+}
+@media (min-width: 992px) {
+.detalle{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+}
+.perfil{
+  margin: 5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+}
+.container-footer{
+  max-height: 75vh;
+}
+.social-icons{
+ margin-left: 7px;
 }

@@ -26,7 +26,7 @@ const DetalleJuego = () => {
   return (
     <div>
     <Card  border="light" style={{ marginTop: '10em' }}>
-      <div className="d-flex justify-content-center align-items-center">
+      <div className="detalle ">
         <Card.Img
           variant="left"
           src={juego.img}
