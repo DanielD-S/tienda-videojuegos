@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import {  Container, Form, Nav, Navbar } from 'react-bootstrap';
 import Contexto from '../Context/Contexto';
 
-const Barra = () => {
+const BarraPrivada = () => {
 
   const [position, setPosition] = useState(0);
 
@@ -48,7 +48,7 @@ const Barra = () => {
         <div style={{ marginLeft: 'auto' }}>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-        <Form className="d-flex">
+        {/* <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Buscar"
@@ -56,7 +56,7 @@ const Barra = () => {
               aria-label="Search"
             />
            
-          </Form>
+          </Form> */}
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
@@ -118,4 +118,4 @@ const Barra = () => {
   )
 }
 
-export default Barra
+export default BarraPrivada
