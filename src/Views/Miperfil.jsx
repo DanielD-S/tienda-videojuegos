@@ -55,7 +55,7 @@ const MiPerfil = () => {
   };
 
   return (
-    <div style={{ marginTop: "8em" }}>
+    <div style={{ marginTop: "8em", minHeight:'70vh' }}>
       <h1>Mi Perfil</h1>
       <div className="perfil">
         <img

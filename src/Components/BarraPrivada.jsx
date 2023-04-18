@@ -1,9 +1,10 @@
 import React, { useState, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom'
-import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import Contexto from '../Context/Contexto';
+import Buscador from './Buscador'
 
-const Barra = () => {
+const Barra = ( {setValorBusqueda}) => {
 
   const [position, setPosition] = useState(0);
 
@@ -11,6 +12,7 @@ const Barra = () => {
   const { usuario, setUsuario } = useContext(Contexto);
   const navigate = useNavigate();
 
+  
   const cerrarApp = () => {
     setUsuario({ conectado: false, nombre: '' });
     navigate('/');
@@ -48,15 +50,7 @@ const Barra = () => {
         <div style={{ marginLeft: 'auto' }}>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-        <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Buscar"
-              className="me-2 buscador"
-              aria-label="Search"
-            />
-           
-          </Form>
+        <Buscador/>
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}

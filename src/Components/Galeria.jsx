@@ -4,8 +4,8 @@ import ContextoGlobal from '../Context/ContextoGlobal.jsx';
 import Cardjuego from './Cardjuego.jsx';
 import Carrusel from './Carrusel.jsx';
 
-const Galeria = ({ fav = false }) => {
-  const { juegos } = useContext(ContextoGlobal);
+const Galeria = ({ fav = false, }) => {
+  const { juegos} = useContext(ContextoGlobal);
   const [sucursalSeleccionada, setSucursalSeleccionada] = useState('');
   const [consolaSeleccionada, setConsolaSeleccionada] = useState('');
 
@@ -18,6 +18,7 @@ const Galeria = ({ fav = false }) => {
   }
 
   return (
+    
     <>
       {!fav && <Carrusel />}
       {!fav && <div style={{ display: 'flex', justifyContent: 'center', margin: '1rem' }}>
@@ -44,6 +45,7 @@ const Galeria = ({ fav = false }) => {
       
       <Row>
         {juegos
+          
           .filter((juego) => !sucursalSeleccionada || juego.dispo.includes(sucursalSeleccionada))
           .filter((juego) => !consolaSeleccionada || juego.consola === consolaSeleccionada)
           .filter((f) => (fav ? f.liked : true))
@@ -54,7 +56,7 @@ const Galeria = ({ fav = false }) => {
           ))}
       </Row>
     </>
-  );
+  )
 };
 
 export default Galeria;

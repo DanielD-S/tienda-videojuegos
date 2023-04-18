@@ -22,7 +22,7 @@ import BarraPrivada from './Components/BarraPrivada.jsx'
 function App() {
 
   const [juegos, setJuegos] = useState([]);
-
+  
   const [juegosFiltrados,setJuegosFiltrados] = useState([]);
 
    //Contexto para ingresar a sesión 
@@ -33,7 +33,7 @@ function App() {
     const res = await fetch(window.location.origin+'/juegos.json');
     const data = await res.json();
     setJuegos(data);
-    setJuegosFiltrados(data);
+    
 
   }
   useEffect(() => {
@@ -48,14 +48,14 @@ function App() {
         <BrowserRouter>
           {/* Definiendo barra y barra pública */}
         {usuario.conectado ?
-        <BarraPrivada></BarraPrivada>:
-        <Barra></Barra>
+        <BarraPrivada ></BarraPrivada>:
+        <Barra ></Barra>
         }
           <Routes>
             
             {/* Rutas Públicas */}
             {/* Ruta Home */}
-            <Route path='/' element={<Home></Home>}/>
+            <Route path='/' element={<Home ></Home>}/>
             {/* Ruta Registro y Login */}
             <Route path='/Login' element={<Login></Login>}>
             </Route> 

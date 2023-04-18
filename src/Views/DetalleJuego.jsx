@@ -24,7 +24,7 @@ const DetalleJuego = () => {
 
 
   return (
-    <div>
+    <div style={{minHeight:'70vh'}}>
     <Card  border="light" style={{ marginTop: '10em' }}>
       <div className="detalle ">
         <Card.Img

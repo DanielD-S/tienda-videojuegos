@@ -3,7 +3,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaEnvelope, FaBuilding 
 
 const Footer = () => {
   return (
-    <div className="footer" style={{ backgroundColor: "#222", color: "#fff", minHeight: '13rem', marginTop:'35px', alignItems:'center' }}>
+    <div className="footer" >
       <Container className='container-footer'>
         <Row>
           <Col md={4} className="footer-section">

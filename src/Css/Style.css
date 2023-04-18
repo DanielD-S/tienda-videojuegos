@@ -19,7 +19,7 @@
   }
   
   /* CSS Registro/Login */
-  .container {
+  .contenedor {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,8 +42,10 @@
 .footer{
   display: flex;  
   justify-content: space-between;
-  grid-area:footer;
-  height: 1em;
+ align-items: center;
+  background-color: #222;
+  color: aliceblue;
+  padding: 10px;
 }
 
 
@@ -129,9 +131,7 @@ align-items: center;
 }
 
 }
-.container-footer{
-  max-height: 75vh;
-}
+
 .social-icons{
  margin-left: 7px;
 }
