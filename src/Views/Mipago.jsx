@@ -29,18 +29,23 @@ const Mipago = () => {
   }
   return (
     <div style={{ marginTop: '10em', textAlign: 'center' }}>
-      <h2>Pagar aquí:</h2>
       <div>
-        <p>Estás comprando el juego {juegoSeleccionado.name}.</p>
+        <p>Estás comprando el juego "<b>{juegoSeleccionado.name}</b>" para <b><i>{juegoSeleccionado.consola}</i></b>.</p>
         <h3>Por ${juegoSeleccionado.price.toLocaleString('es-CL', { minimumFractionDigits: 0 })}</h3>
         <img style={{ width: '250px' }} src={juegoSeleccionado.img} alt={juegoSeleccionado.name}></img>
       </div>
+      <hr />
+      <div>
+      <h2>Paga aquí:</h2>
       <img
         src="https://jumpseller.s3.eu-west-1.amazonaws.com/store/la-mascota/assets/WebPay3.png"
         alt="WebPay3"
-        style={{ width: '300px', height: 'auto', margin: '2em auto', cursor: 'pointer' }}
+        style={{ width: '250px', height: 'auto', margin: '0.5em auto', cursor: 'pointer' }}
         onClick={() => setModalIsOpen(true)}
       />
+      </div>
+      
+     
       <ReactModal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
@@ -57,6 +62,7 @@ const Mipago = () => {
             transform: 'translate(-50%, -50%)',
             width: '90%',
             maxWidth: '500px',
+            height:'450px',
             padding: '2em',
             borderRadius: '8px',
             boxShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
