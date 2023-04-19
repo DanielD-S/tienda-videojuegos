@@ -1,5 +1,5 @@
-import { Card, Button } from 'react-bootstrap';
 import React, { useContext } from 'react';
+import { Card, Button } from 'react-bootstrap';
 import Heart from './Heart.jsx';
 import ContextoGlobal from '../Context/ContextoGlobal.jsx';
 import Contexto from '../Context/Contexto.jsx';
@@ -15,14 +15,14 @@ const Cardjuego = ({ fav, juego, sucursalSeleccionada }) => {
     setJuegos([...juegos]);
   };
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // creamos una instancia de useNavigate
 
   const verDetalle = () => {
     navigate(`/Detalle/${juego.id}`);
   };
 
-  const verCompra= () => {
-    navigate(`/mipago`);
+  const verCompra = () => {
+    navigate(`/mipago/${juego.id}`);
   };
 
   return (

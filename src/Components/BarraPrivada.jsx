@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom'
-import {  Container, Form, Nav, Navbar } from 'react-bootstrap';
+import {  Container, Nav, Navbar } from 'react-bootstrap';
 import Contexto from '../Context/Contexto';
 
 const BarraPrivada = () => {

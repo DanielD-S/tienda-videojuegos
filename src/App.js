@@ -82,7 +82,7 @@ function App() {
             {/* Ruta Favoritos*/}
             <Route path="/favoritos" element={<Favoritos />} />
             {/* Ruta Mi Pago*/}
-            <Route path="/mipago" element={<Mipago />} />
+            <Route path="/mipago/:id" element={<Mipago />} />
             </>}
           </Routes>  
           {/* Footer */}
