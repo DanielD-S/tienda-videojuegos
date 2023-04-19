@@ -21,6 +21,10 @@ const Cardjuego = ({ fav, juego, sucursalSeleccionada }) => {
     navigate(`/Detalle/${juego.id}`);
   };
 
+  const verCompra= () => {
+    navigate(`/mipago`);
+  };
+
   return (
     <div style={{ width: '15rem', height: '460px', margin: '1em' }}>
       <Card style={{ height: '100%' }}>
@@ -50,9 +54,10 @@ const Cardjuego = ({ fav, juego, sucursalSeleccionada }) => {
               </h4>
             </div>
           </div>
-          <div style={{ margin: '1rem' }}>
+          <div style={{ margin: '1rem',  display: 'flex', justifyContent: 'space-between', marginTop: '1rem'}}>
             <hr />
             <Button onClick={() => verDetalle()}>Ver más</Button>
+            <Button onClick={() => verCompra()}>Comprar</Button>
           </div>
         </Card.Body>
       </Card>
