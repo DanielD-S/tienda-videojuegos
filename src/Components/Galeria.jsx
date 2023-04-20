@@ -17,8 +17,7 @@ const Galeria = ({ fav = false, }) => {
     setConsolaSeleccionada(consola);
   }
 
-  return (
-    
+  return (    
     <>
       {!fav && <Carrusel />}
       {!fav && <div style={{ display: 'flex', justifyContent: 'center', margin: '1rem' }}>
@@ -44,8 +43,7 @@ const Galeria = ({ fav = false, }) => {
       </div>}
       
       <Row>
-        {juegos
-          
+        {juegos          
           .filter((juego) => !sucursalSeleccionada || juego.dispo.includes(sucursalSeleccionada))
           .filter((juego) => !consolaSeleccionada || juego.consola === consolaSeleccionada)
           .filter((f) => (fav ? f.liked : true))
@@ -56,7 +54,7 @@ const Galeria = ({ fav = false, }) => {
           ))}
       </Row>
     </>
-  )
+  );
 };
 
 export default Galeria;

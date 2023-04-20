@@ -2,10 +2,10 @@ import React from 'react'
 import Galeria from '../Components/Galeria'
 
 
-const Home = (valorBusqueda) => {
+const Home = () => {
   return (
     <div id="Home">
-        <Galeria valorBusqueda={valorBusqueda} fav={false}></Galeria>
+        <Galeria  fav={false}></Galeria>
         
        
     </div>
