@@ -15,15 +15,18 @@ const Cardjuego = ({ fav, juego, sucursalSeleccionada }) => {
     setJuegos([...juegos]);
   };
 
+
   const navigate = useNavigate(); // creamos una instancia de useNavigate
 
   const verDetalle = () => {
     navigate(`/Detalle/${juego.id}`);
   };
 
+
   const verCompra = () => {
     navigate(`/mipago/${juego.id}`);
   };
+
 
   return (
     <div style={{ width: '15rem', height: '460px', margin: '1em' }}>
@@ -54,6 +57,7 @@ const Cardjuego = ({ fav, juego, sucursalSeleccionada }) => {
               </h4>
             </div>
           </div>
+
           <div style={{ margin: '1rem',  display: 'flex', justifyContent: 'space-between', marginTop: '1rem'}}>
             <hr />
             <Button onClick={() => verDetalle()}>Ver más</Button>

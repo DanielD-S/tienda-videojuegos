@@ -2,6 +2,7 @@ Ultima vesion Repo:14/04/2023
 
 Demo: https://tienda-videojuegos.vercel.app
 
+
 Usuarios de prueba:
 
 email:leonardo@gmail.com
@@ -15,3 +16,4 @@ email:daniel@gmail.com
            
 email:andres@gmail.com
             clave: 12345
+

@@ -3,8 +3,9 @@ import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaEnvelope, FaBuilding 
 
 const Footer = () => {
   return (
-    <div className="footer" style={{ backgroundColor: "#222", color: "#fff", minHeight: '35rem', marginTop:'35px', alignItems:'center' }}>
-      <Container>
+    <div className="footer" >
+      <Container className='container-footer'>
+
         <Row>
           <Col md={4} className="footer-section">
             <h5 style={{ textShadow: "1px 1px #000" }}>theGame</h5>
@@ -12,10 +13,10 @@ const Footer = () => {
           </Col>
           <Col md={2} className="footer-section">
             <h5 style={{ textShadow: "1px 1px #000" }}>Redes Sociales</h5>
-            <div className="social-icons">
-              <a href="https://www.facebook.com"><FaFacebook /></a>
-              <a href="https://www.twitter.com"><FaTwitter /></a>
-              <a href="https://www.instagram.com"><FaInstagram /></a>
+            <div >
+              <a className="social-icons"href="https://www.facebook.com"><FaFacebook /></a>
+              <a className="social-icons"href="https://www.twitter.com"><FaTwitter /></a>
+              <a className="social-icons" href="https://www.instagram.com"><FaInstagram /></a>
             </div>
           </Col>
           <Col md={3} className="footer-section">
@@ -44,5 +45,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

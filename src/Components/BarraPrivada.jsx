@@ -1,7 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom'
-import {  Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import Contexto from '../Context/Contexto';
+import Buscador from './Buscador'
+
 
 const BarraPrivada = () => {
 
@@ -48,6 +50,7 @@ const BarraPrivada = () => {
         <div style={{ marginLeft: 'auto' }}>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
+
         {/* <Form className="d-flex">
             <Form.Control
               type="search"
@@ -57,6 +60,7 @@ const BarraPrivada = () => {
             />
            
           </Form> */}
+
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}

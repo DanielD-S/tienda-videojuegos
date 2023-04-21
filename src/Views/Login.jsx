@@ -40,7 +40,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
+    <div className="contenedor">
       <div className="row">
         <div className="col-md-6">
           <Card>

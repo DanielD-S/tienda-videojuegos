@@ -4,8 +4,8 @@ import ContextoGlobal from '../Context/ContextoGlobal.jsx';
 import Cardjuego from './Cardjuego.jsx';
 import Carrusel from './Carrusel.jsx';
 
-const Galeria = ({ fav = false }) => {
-  const { juegos } = useContext(ContextoGlobal);
+const Galeria = ({ fav = false, }) => {
+  const { juegos} = useContext(ContextoGlobal);
   const [sucursalSeleccionada, setSucursalSeleccionada] = useState('');
   const [consolaSeleccionada, setConsolaSeleccionada] = useState('');
 
@@ -17,7 +17,7 @@ const Galeria = ({ fav = false }) => {
     setConsolaSeleccionada(consola);
   }
 
-  return (
+  return (    
     <>
       {!fav && <Carrusel />}
       {!fav && <div style={{ display: 'flex', justifyContent: 'center', margin: '1rem' }}>

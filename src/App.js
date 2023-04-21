@@ -19,9 +19,12 @@ import BarraPrivada from './Components/BarraPrivada.jsx'
 import Mipago from './Views/Mipago.jsx';
 
 
+
 function App() {
 
   const [juegos, setJuegos] = useState([]);
+  
+  const [juegosFiltrados,setJuegosFiltrados] = useState([]);
 
    //Contexto para ingresar a sesión 
    const { usuario } = useContext(Contexto); 
@@ -31,6 +34,7 @@ function App() {
     const res = await fetch(window.location.origin+'/juegos.json');
     const data = await res.json();
     setJuegos(data);
+    
 
   }
   useEffect(() => {
@@ -41,18 +45,18 @@ function App() {
 
   return (
     <div className="Style">
-      <ContextoGlobal.Provider value={{juegos, setJuegos}}>
+      <ContextoGlobal.Provider value={{juegos, setJuegos, juegosFiltrados,setJuegosFiltrados}}>
         <BrowserRouter>
           {/* Definiendo barra y barra pública */}
         {usuario.conectado ?
-        <BarraPrivada></BarraPrivada>:
-        <Barra></Barra>
+        <BarraPrivada ></BarraPrivada>:
+        <Barra ></Barra>
         }
           <Routes>
             
             {/* Rutas Públicas */}
             {/* Ruta Home */}
-            <Route path='/' element={<Home></Home>}/>
+            <Route path='/' element={<Home ></Home>}/>
             {/* Ruta Registro y Login */}
             <Route path='/Login' element={<Login></Login>}>
             </Route> 
