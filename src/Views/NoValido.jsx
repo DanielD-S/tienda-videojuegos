@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
 const NoValido = () => {
-  return (
-    
-    <div>Esta Ruta no es valida</div>
-  )
-}
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-export default NoValido
+  return (
+    <div style={{ marginTop: '8em' }}>Debes Ingresar como Usuario</div>
+  );
+};
+
+export default NoValido;

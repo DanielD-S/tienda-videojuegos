@@ -4,7 +4,8 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import Contexto from '../Context/Contexto';
 import Buscador from './Buscador'
 
-const Barra = ( {setValorBusqueda}) => {
+
+const BarraPrivada = () => {
 
   const [position, setPosition] = useState(0);
 
@@ -12,7 +13,6 @@ const Barra = ( {setValorBusqueda}) => {
   const { usuario, setUsuario } = useContext(Contexto);
   const navigate = useNavigate();
 
-  
   const cerrarApp = () => {
     setUsuario({ conectado: false, nombre: '' });
     navigate('/');
@@ -50,7 +50,17 @@ const Barra = ( {setValorBusqueda}) => {
         <div style={{ marginLeft: 'auto' }}>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-        <Buscador/>
+
+        {/* <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Buscar"
+              className="me-2 buscador"
+              aria-label="Search"
+            />
+           
+          </Form> */}
+
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
@@ -112,4 +122,4 @@ const Barra = ( {setValorBusqueda}) => {
   )
 }
 
-export default Barra
+export default BarraPrivada

@@ -16,6 +16,7 @@ import HomePrivado from './Views/HomePrivado.jsx';
 import NoValido from './Views/NoValido.jsx';
 import Contexto from './Context/Contexto.jsx';
 import BarraPrivada from './Components/BarraPrivada.jsx'
+import Mipago from './Views/Mipago.jsx';
 
 
 
@@ -84,6 +85,8 @@ function App() {
             <Route path="/MiPerfil" element={<Miperfil/>} />
             {/* Ruta Favoritos*/}
             <Route path="/favoritos" element={<Favoritos />} />
+            {/* Ruta Mi Pago*/}
+            <Route path="/mipago/:id" element={<Mipago />} />
             </>}
           </Routes>  
           {/* Footer */}

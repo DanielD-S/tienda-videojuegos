@@ -43,7 +43,7 @@ const Galeria = ({ fav = false, }) => {
       </div>}
       
       <Row>
-        {juegos          
+        {juegos
           .filter((juego) => !sucursalSeleccionada || juego.dispo.includes(sucursalSeleccionada))
           .filter((juego) => !consolaSeleccionada || juego.consola === consolaSeleccionada)
           .filter((f) => (fav ? f.liked : true))

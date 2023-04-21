@@ -5,6 +5,7 @@ const Footer = () => {
   return (
     <div className="footer" >
       <Container className='container-footer'>
+
         <Row>
           <Col md={4} className="footer-section">
             <h5 style={{ textShadow: "1px 1px #000" }}>theGame</h5>
@@ -44,4 +45,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
