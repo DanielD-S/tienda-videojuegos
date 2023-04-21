@@ -16,7 +16,7 @@ const Registro = () => {
   };
 
   return (
-    <div className="contenedor" style={{marginTop:'3em'}}>
+    <div className="contenedor" style={{marginTop:'5em'}}>
       <Card className="p-5">
       <Form style={{textAlign:'start'}}   onSubmit={handleSubmit}>
         <Form.Group controlId="formFirstName">
