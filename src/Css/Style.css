@@ -28,7 +28,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    min-height: 75vh;
+    margin-top: 5em;
     
   }
   
@@ -51,7 +52,7 @@
 background-color: transparent;
 border:0;
 margin-left: 12rem;
-
+}
 /*Animacion Card*/
 
 .card-image {
